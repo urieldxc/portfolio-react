@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
+import { useState } from 'react';
+import Work from './components/Work';
+
 
 function App() {
+  const [lang, setLang] = useState("es");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar lang={lang} setLang={setLang}/>
+      <div className='main-container'>
+        <Hero lang={lang} />
+        <Work lang={lang}/>
+      </div>
+
     </div>
   );
 }
