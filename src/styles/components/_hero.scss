@@ -1,0 +1,81 @@
+.hero {
+    margin-top: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1067px;
+
+    .heroImgDiv {
+        position: relative;
+        width: 535px;
+        height: 670px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .portrait {
+            width: 360px;
+            height: 500px;
+            z-index: 2;
+        }
+
+        .dotPattern {
+            width: 175px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.25;
+            z-index: 1;
+        }
+
+        .dotPattern2 {
+            width: 175px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            opacity: 0.25;
+            z-index: 1;
+        }
+    }
+
+    .heroTextDiv {
+        width: 560px;
+        margin-bottom: 10%;
+        margin-left: -40px;
+        gap: 20px;
+
+        .heroTitle {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .heroDescription {
+            margin: 20px 0 20px 0;
+        }
+
+        .heroButtons {
+            display: flex;
+            gap: 40px;
+
+            button {
+                padding: 15px 30px 15px 30px;
+                font-family: 'Inter', sans-serif;
+                border-radius: 5px;
+                border: 1px solid $black;
+                font-size: 16px;
+                cursor: pointer;
+
+                &:nth-child(1) {
+                    background: $black;
+                    color: $white;
+                }
+
+                &:nth-child(2) {
+                    background: transparent;
+                    border: 1px solid $black;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.workCard {
+    width: 350px;
+    $value: 100%;
+    $value2: 50%;
+
+    img {
+        width: auto;
+        height: 250px;
+        border-radius: 20px;
+    }
+
+    h4 {
+        font-size: 20px;
+        margin: 10px 0px;
+    }
+
+    .workTagsDiv {
+        display: flex;
+        gap: 10px;
+    }
+
+    .workButtons {
+        display: flex;
+        gap: 20px;
+
+        button {
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+            border: 1px solid $black;
+            background-color: transparent;
+            cursor: pointer;
+
+            &:nth-child(1) {
+                color: $white;
+                background: $black;
+                font-family: 'Inter', sans-serif;
+            }
+        }
+
+    }
+
+    .cardDescription {
+        min-height: 80px;
+    }
+}

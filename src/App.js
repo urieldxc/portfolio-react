@@ -1,8 +1,9 @@
-import './App.css';
+// import './App.css';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import { useState } from 'react';
 import Work from './components/Work';
+
 
 
 function App() {

@@ -1,0 +1,14 @@
+.filterTag {
+    button {
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background: $black;
+            color: $white;
+        }
+    }
+}
