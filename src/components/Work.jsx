@@ -3,13 +3,13 @@ import en from '../languages/en'
 import es from '../languages/es'
 import FilterTags from './FilterTags'
 import WorkCard from './WorkCard'
-import {workList} from '../works'
+import {workList, workTags} from '../works'
 
 function Work({lang}) {
     const [filteredWork, setFilteredWork] = useState(workList)
-    const handleFilter = (tag) =>{
-        const filtered = workList.filter(item => item.tags.includes(tag))
-        setFilteredWork(filtered)
+    const handleFilter = (e) =>{
+        const filtered = workList.filter(item => item.tags.includes(e))
+        e !== "All" ? setFilteredWork(filtered) : setFilteredWork(workList)
     }
     const t = lang === "en" ? en : es
   return (
@@ -19,10 +19,10 @@ function Work({lang}) {
             <p>{t.workDescription}</p>
         </div>
         <div className='filterTagsDiv'>
-            <FilterTags handleFilter={handleFilter}/>
+            {workTags.map((e, index) => <FilterTags key={index} handleFilter={handleFilter} tag={e} />)}
         </div>
         <div className='workGrid'>
-            {filteredWork.map( work => <WorkCard work={work} lang={lang} />)}
+            {filteredWork.map( (work, i) => <WorkCard key={i} work={work} lang={lang} />)}
         </div>
     </div>
   )

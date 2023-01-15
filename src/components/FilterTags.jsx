@@ -1,15 +1,19 @@
-import React from 'react'
-import { workTags } from '../works'
+import React, {useEffect, useState} from 'react'
+import { workTags, numberJS, numberReact, numberAll, numberHtmlCss } from '../works'
 
-function FilterTags({handleFilter}) {
+function FilterTags({tag, handleFilter}) {
+    const [totalNumber, setTotalNumber] = useState(numberAll)
+    useEffect(()=>{
+        if(tag === "HTML & CSS") setTotalNumber(numberHtmlCss)
+        if(tag === "React") setTotalNumber(numberReact)
+        if(tag === "JavaScript") setTotalNumber(numberJS)
+    }, [])
+
+
     return (
-        <>
-            {workTags.map((tag) =>
-                <div className='filterTag'>
-                    <button onClick={()=> handleFilter(tag)}>{tag}</button>
-                </div>
-            )}
-        </>
+        <div className='filterTag'>
+            <button className='buttonFilter' onClick={() =>handleFilter(tag)}> {tag} ({totalNumber})</button>
+        </div>
 
 
     )

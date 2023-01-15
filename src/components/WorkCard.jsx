@@ -2,7 +2,6 @@ import React from 'react'
 import WorkTag from './WorkTag'
 
 const WorkCard = ({lang, work}) => {
-console.log(lang)
   return (
     <div className='workCard'>
         <img src={work.image} />
