@@ -1,12 +1,12 @@
 import React from 'react'
 import { workTags } from '../works'
 
-function FilterTags() {
+function FilterTags({handleFilter}) {
     return (
         <>
             {workTags.map((tag) =>
                 <div className='filterTag'>
-                    <button>{tag}</button>
+                    <button onClick={()=> handleFilter(tag)}>{tag}</button>
                 </div>
             )}
         </>
