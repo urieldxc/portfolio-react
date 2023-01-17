@@ -6,6 +6,12 @@
         border: none;
         cursor: pointer;
 
+        @include mediaQ(sm){
+            font-size: 20px;
+            padding: 5px 10px;
+            overflow: hidden;
+        }
+
         &:hover {
             background: $black;
             color: $white;

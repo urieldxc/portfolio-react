@@ -6,7 +6,26 @@ $black: black;
 
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+}
+ 
+$breakpoints: (
+  sm: 540px,
+  md: 768px,
+  lg: 1024px
+);
+
+@mixin mediaQ($breakpoint){
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)){
+    @content;
+  }
+}
+@mixin maxScreenDisplay($breakpoint){
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)){
+    @content;
+  }
 }
 
 //Components

@@ -9,22 +9,40 @@
     padding-left: 30px;
     padding-right: 30px;
 
-    ul {
-        list-style-type: none;
-        display: flex;
-        gap: 30px;
-
-        a{
-            text-decoration: none;
-            &:visited{
-                color: $black;
-            }
-        }
-
-        li:hover {
-            cursor: pointer
+    @include mediaQ(sm) {
+        padding-left: 15vw;
+        padding-right: 15vw;
+        height: 70px;
+    }
+    .hamburger-react{
+        @include maxScreenDisplay(sm) {
+            display: none;
         }
     }
+    .navLinks {
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+
+            a {
+                text-decoration: none;
+
+                &:visited {
+                    color: $black;
+                }
+            }
+
+            li:hover {
+                cursor: pointer
+            }
+
+            @include mediaQ(sm) {
+                display: none;
+            }
+        }
+    }
+
 
     .navLang {
         button {
@@ -33,10 +51,41 @@
             cursor: pointer;
         }
     }
-    .logo{
+
+    .logo {
         font-size: 40px;
         font-weight: bolder;
         text-decoration: none;
         color: $black;
-      }
+    }
+}
+
+
+
+.menuLinks {
+    border-top: 2px solid rgba(0, 0, 0, 0.068);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.068);
+    background: $white-2;
+
+    &.display{
+        display: none;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        li{
+            padding: 10px 0;
+            list-style-type: none;
+            text-align: center;
+            a{
+                text-decoration: none;
+                &:visited{
+                    color: black;
+                }
+            }
+        }
+    }
 }
