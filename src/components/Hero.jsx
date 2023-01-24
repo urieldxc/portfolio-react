@@ -19,8 +19,8 @@ function Hero({lang}) {
             <p className='heroTitle'>{t.heroTitle} <span className='textDetail'>Junior Front-end Developer</span> </p>
             <p className='heroDescription'>{t.heroDescription}</p>
             <div className="heroButtons">
-                <button>{t.contactMe}</button>
-                <button>{t.checkMyWork}</button>
+                <button><a href='#contact'>{t.contactMe} </a></button>
+                <button><a href='#workDiv'>{t.checkMyWork} </a></button>
             </div>
         </div>
     </div>

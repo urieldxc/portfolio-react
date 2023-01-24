@@ -5,6 +5,7 @@
         border-radius: 20px;
         border: none;
         cursor: pointer;
+        background: $white-2;
 
         @include mediaQ(sm){
             font-size: 20px;

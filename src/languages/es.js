@@ -10,6 +10,14 @@ export default {
     workDescription: "Ojea mis proyectos tanto personales como comerciales",
 
     view: "Ver",
+    contactTitle: "Contacto",
+    contactText: "Siempre estoy disponible para nuevas oportunidades. Gracias por tu tiempo.",
+    contactButton: "Escríbeme!",
+
+    resumeeTitle: "Currículum",
+    resumeeText: "Si quieres saber más sobre mi, aquí puedes descargar mi currículum",
+    resumeeButton: "Descargar CV"
+
 
     
 }

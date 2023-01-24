@@ -3,19 +3,30 @@
     $value: 100%;
     $value2: 50%;
 
+    padding: 24px;
+
+    @include mediaQ(sm){
+        display: flex;
+        flex-direction: column;
+        
+    }
+
     img {
         width: auto;
         height: 250px;
-        border-radius: 20px;
+        border-radius: 10px;
         @include mediaQ(sm){
-            width: 310px;
+            width: auto;
             height: auto;
         }
     }
 
     h4 {
         font-size: 20px;
-        margin: 10px 0px;
+        margin: 20px 0px;
+        @include mediaQ(sm){
+            font-size: 1.75em;
+        }
     }
 
     .workTagsDiv {
@@ -54,6 +65,7 @@
         min-height: 80px;
         @include mediaQ(sm){
             min-height: auto;
+            width: 95%;
         }
     }
 }

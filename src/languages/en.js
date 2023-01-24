@@ -9,4 +9,12 @@ export default {
     workTitle: "Work",
     workDescription: "Check my commercial and non commercial projects",
     view: "View",
+
+    contactTitle: "Get In Touch",
+    contactText: "I'm currently looking for any new opportunities, my inbox is always open. I hope to win a chance with you. Again, thanks for your time.",
+    contactButton: "Let's talk!",
+
+    resumeeTitle: "My Resumee",
+    resumeeText: "If you want to know more about me you can download my resumee here",
+    resumeeButton: "Download CV"
 }

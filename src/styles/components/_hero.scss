@@ -137,6 +137,13 @@
                     padding: 20px;
                 }
 
+                a{
+                    text-decoration: none;
+                    &:visited{
+                        color: inherit
+                    }
+                }
+
                 &:nth-child(1) {
                     background: $black;
                     color: $white;

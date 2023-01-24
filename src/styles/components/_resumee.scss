@@ -1,0 +1,55 @@
+.resumeeDiv{
+    color: $white;
+    // border: 1px solid $white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    // width: 50%;
+    p{
+        width: 60%;
+    }
+    h2{
+            margin-top: 55px;
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            
+        
+    }
+
+    @include mediaQ(sm){
+        width: 100%;
+    }
+
+    button{
+        padding: 15px 30px 15px 30px;
+        font-family: 'Inter', sans-serif;
+        border-radius: 5px;
+        border: 1px solid $black;
+        
+        font-size: 16px;
+        cursor: pointer;
+        background: $white;
+        color: $black;
+        margin-top: 1.5em;
+        width: 40%;
+
+        @include mediaQ(lg){
+            width: 60%;
+        }
+        @include mediaQ(sm){
+            width: 40%;
+        }
+
+        a{
+            text-decoration: none;
+            color: $black;
+            &:visited{
+                color: black
+            }
+        }
+    }
+        
+}

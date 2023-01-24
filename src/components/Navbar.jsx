@@ -48,7 +48,7 @@ function Navbar({ lang, setLang }) {
             <div className='menuLinks display'>
                 <ul>
                     <li> <a href='#workDiv'>{t.work}</a></li>
-                    <li>{t.contact}</li>
+                    <li> <a href='#contact'>{t.contact}</a></li>
                     <li>{t.resumee}</li>
                 </ul>
             </div>

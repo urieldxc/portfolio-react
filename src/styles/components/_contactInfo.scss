@@ -1,0 +1,9 @@
+.contactInfo{
+    display: flex;
+    background: #252525;
+    justify-content: center;
+    @include mediaQ(sm){
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

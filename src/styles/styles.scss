@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&family=Roboto+Slab:wght@400;700&display=swap');
 
-$white : white;
-$white-2: #FAFAFA;
-$black: black;
+$white : #fdfdfd ;
+$white-2: #f0f0f0;
+$black: #252525;
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  background: $white;
 }
+
  
 $breakpoints: (
   sm: 540px,
@@ -35,3 +38,7 @@ $breakpoints: (
 @import './components/filterTags';
 @import './components/workCard';
 @import './components/workTag';
+@import './components/goTop';
+@import './components/contact';
+@import './components/contactInfo';
+@import './components/resumee';
