@@ -5,7 +5,7 @@ function WorkTag({ tags }) {
         <>
             {tags.map((tag, index) =>
                 <div key={index} className='workTag'>
-                    <button >{tag}</button>
+                    <button>{tag}</button>
                 </div>
             )}
         </>

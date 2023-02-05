@@ -18,6 +18,4 @@ export default {
     resumeeText: "Si quieres saber más sobre mi, aquí puedes descargar mi currículum",
     resumeeButton: "Descargar CV"
 
-
-    
 }

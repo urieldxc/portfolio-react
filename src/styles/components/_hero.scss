@@ -5,7 +5,21 @@
     justify-content: center;
     min-width: 1067px;
 
-    @include mediaQ(sm){
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+
+    @include mediaQ(sm) {
         margin-top: 0px;
         flex-direction: column;
         min-width: auto;
@@ -13,9 +27,10 @@
         padding: 0 30px;
     }
 
-    @include mediaQ(lg){
+    @include mediaQ(lg) {
         min-width: none;
     }
+
 
 
     .heroImgDiv {
@@ -26,11 +41,12 @@
         justify-content: center;
         align-items: center;
 
-        @include mediaQ(sm){
+        @include mediaQ(sm) {
             height: auto;
             padding: 40px 40px;
         }
-        @include mediaQ(lg){
+
+        @include mediaQ(lg) {
             width: auto;
         }
 
@@ -39,7 +55,7 @@
             height: 500px;
             z-index: 2;
 
-            @include mediaQ(lg){
+            @include mediaQ(lg) {
                 width: 270px;
                 height: 400px;
             }
@@ -53,10 +69,11 @@
             opacity: 0.25;
             z-index: 1;
 
-            @include mediaQ(sm){
+            @include mediaQ(sm) {
                 display: none;
             }
-            @include mediaQ(lg){
+
+            @include mediaQ(lg) {
                 width: 100px;
                 top: 90px;
                 left: -40px;
@@ -71,10 +88,12 @@
             right: 0;
             opacity: 0.25;
             z-index: 1;
-            @include mediaQ(sm){
+
+            @include mediaQ(sm) {
                 display: none;
             }
-            @include mediaQ(lg){
+
+            @include mediaQ(lg) {
                 width: 100px;
                 bottom: 90px;
                 right: -40px;
@@ -87,11 +106,12 @@
         margin-bottom: 10%;
         margin-left: -40px;
         gap: 20px;
-        
-        @include mediaQ(sm){
-            width: auto; 
+
+        @include mediaQ(sm) {
+            width: auto;
         }
-        @include mediaQ(lg){
+
+        @include mediaQ(lg) {
             margin-left: 3%;
             margin-bottom: 0%;
         }
@@ -100,13 +120,16 @@
             font-size: 40px;
             font-weight: bold;
             margin: 0;
-            @include mediaQ(sm){
+
+            @include mediaQ(sm) {
                 font-size: 1.6em;
             }
-            span{
+
+            span {
                 color: $white;
                 background: $black;
-                @include mediaQ(sm){
+
+                @include mediaQ(sm) {
                     font-size: 0.9em;
                 }
             }
@@ -115,10 +138,12 @@
         .heroDescription {
             margin: 20px 0 20px 0;
             width: 95%;
-            @include mediaQ(sm){
+
+            @include mediaQ(sm) {
                 margin-top: 20px;
             }
         }
+
 
         .heroButtons {
             display: flex;
@@ -131,15 +156,21 @@
                 border: 1px solid $black;
                 font-size: 16px;
                 cursor: pointer;
+                transition: transform 0.2s ease-in-out;
 
-                @include mediaQ(sm){
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                @include mediaQ(sm) {
                     margin: 60px auto;
                     padding: 20px;
                 }
 
-                a{
+                a {
                     text-decoration: none;
-                    &:visited{
+
+                    &:visited {
                         color: inherit
                     }
                 }
@@ -147,7 +178,8 @@
                 &:nth-child(1) {
                     background: $black;
                     color: $white;
-                    @include mediaQ(sm){
+
+                    @include mediaQ(sm) {
                         width: 60%;
                     }
                 }
@@ -155,7 +187,8 @@
                 &:nth-child(2) {
                     background: transparent;
                     border: 1px solid $black;
-                    @include mediaQ(sm){
+
+                    @include mediaQ(sm) {
                         display: none;
                     }
                 }

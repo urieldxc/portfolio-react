@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import en from '../languages/en'
 import es from '../languages/es'
 import { Squeeze as Hamburger } from 'hamburger-react'
+import logo from "../img/logo.png"
 
 function Navbar({ lang, setLang }) {
     const [isOpen, setOpen] = useState(false)
@@ -14,23 +15,25 @@ function Navbar({ lang, setLang }) {
         document.querySelector(".menuLinks").classList.toggle("display")
     }
     const t = lang === "en" ? en : es
+    
     return (
         <>
             <header>
                 <div className='navbar'>
-                    <a href='/' className='logo'>ST</a>
+                    {/* <a href='/' className='logo'>ST</a> */}
+                    <img className="logoImg" src={logo} alt="logo"></img>
                     <div className='navLinks'>
                         <ul>
-                            <li> <a href='#workDiv'>{t.work}</a></li>
-                            <li>{t.contact}</li>
-                            <li>{t.resumee}</li>
+                            <li className='hover-scale'> <a href='#workDiv'>{t.work}</a></li>
+                            <li className='hover-scale'>{t.contact}</li>
+                            <li className='hover-scale'>{t.resumee}</li>
                         </ul>
                     </div>
 
                     <div className='navLang'>
-                        <button onClick={() => changeLang("en")} className='buttonEN'>EN</button>
+                        <button onClick={() => changeLang("en")} className='buttonEN hover-scale'>EN</button>
                         |
-                        <button onClick={() => changeLang("es")} className='buttonES'>ES</button>
+                        <button onClick={() => changeLang("es")} className='buttonES hover-scale'>ES</button>
                     </div>
 
 

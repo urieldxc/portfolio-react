@@ -1,0 +1,30 @@
+.hover-scale {
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.grayscale-img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+
+    img {
+        box-shadow: 1px 2px 5px #ccc;
+    }
+
+    &:hover {
+        filter: grayscale(0);
+    }
+}
+
+.move-up {
+    &>* {
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+}

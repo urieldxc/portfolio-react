@@ -12,7 +12,7 @@ function FilterTags({tag, handleFilter}) {
 
     return (
         <div className='filterTag'>
-            <button className='buttonFilter' onClick={() =>handleFilter(tag)}> {tag} ({totalNumber})</button>
+            <button className='buttonFilter hover-scale' onClick={() =>handleFilter(tag)}> {tag} ({totalNumber})</button>
         </div>
 
 

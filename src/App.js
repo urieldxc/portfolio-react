@@ -4,8 +4,6 @@ import Navbar from './components/Navbar';
 import { useState, useRef, useEffect } from 'react';
 import Work from './components/Work';
 import GoTop from './components/GoTop';
-import Contact from './components/Contact';
-import Resumee from './components/Resumee';
 import ContactInfo from './components/ContactInfo';
 
 

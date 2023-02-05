@@ -10,10 +10,10 @@ const Contact = ({ lang }) => {
                 <div className='contactText'>
                     <h2>{t.contactTitle}</h2>
                     <p>{t.contactText}</p>
-                    <button><a href='mailto:sergiota.cs@gmail.com'> {t.contactButton}</a></button>
+                    <button className='hover-scale '><a href='mailto:sergiota.cs@gmail.com'> {t.contactButton}</a></button>
                 </div>
 
-                <div className='socialIcons'>
+                <div className='socialIcons move-up'>
                     <iconify-icon icon="jam:twitter" width="50px"></iconify-icon>
                     <iconify-icon icon="jam:linkedin-square" width="50px"></iconify-icon>
                     <iconify-icon icon="jam:github" width="50px"></iconify-icon>

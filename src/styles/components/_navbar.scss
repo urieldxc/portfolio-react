@@ -6,8 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding:15px 30px;
 
     @include mediaQ(sm) {
         padding-left: 15vw;
@@ -31,6 +30,7 @@
                 &:visited {
                     color: $black;
                 }
+                
             }
 
             li:hover {
@@ -50,6 +50,9 @@
             font-size: 18px;
             cursor: pointer;
         }
+        @include mediaQ(sm) {
+            margin-right: 40px;
+        }
     }
 
     .logo {
@@ -57,6 +60,10 @@
         font-weight: bolder;
         text-decoration: none;
         color: $black;
+    }
+
+    .logoImg{
+        width: 65px;
     }
 }
 
